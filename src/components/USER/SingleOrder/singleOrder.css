@@ -1,0 +1,107 @@
+.greenColor {
+  color: green !important;
+}
+
+.redColor {
+  color: rgb(255, 0, 0) !important;
+}
+
+.orderDetailsPage {
+  background-color: white;
+}
+
+.orderDetailsContainer {
+  padding: 5vmax;
+  padding-bottom: 0%;
+}
+
+.orderDetailsContainerBox,
+.orderDetailsCartItemsContainer {
+  margin: 2vmax;
+}
+
+.orderDetailsContainerBox > div {
+  display: flex;
+  align-items: center;
+  margin: 1vmax 0;
+}
+
+.orderDetailsCartItems {
+  padding: 2vmax 5vmax;
+  border-top: 1px solid rgba(0, 0, 0, 0.164);
+}
+
+.orderDetailsCartItemsContainer > div {
+  display: flex;
+  font: 400 1vmax "Roboto";
+  align-items: center;
+  margin: 2vmax 0;
+}
+
+.orderDetailsCartItemsContainer > div > img {
+  width: 10vmin;
+  border-radius: 0.6vmax;
+}
+
+/* {<------------------fonts------------------>} */
+.orderDetailsContainer > h1 {
+  font: 300 3vmax "Roboto";
+  margin: 4vmax 0;
+  color: tomato;
+}
+
+.orderDetailsContainerBox > div > p {
+  font: 400 2vmax "Roboto";
+  color: black;
+  /* border: 1px solid black; */
+}
+.orderDetailsContainerBox > div > span {
+  margin: 0 1vmax;
+  font: 500 2vmax "Roboto";
+  color: #575757;
+  /* border: 1px solid rgb(255, 5, 5); */
+}
+
+.orderDetailsCartItemsContainer > div {
+  display: flex;
+
+  align-items: center;
+  margin: 2vmax 0;
+}
+
+.orderDetailsContainer > p {
+  font: 400 2.5vmax "Roboto";
+  /* border: 1px solid rgb(59, 5, 255); */
+}
+
+.orderDetailsCartItems > p {
+  font: 400 1.8vmax "Roboto";
+  /* border: 10px solid rgb(255, 5, 5); */
+}
+
+.orderDetailsCartItemsContainer > div > span {
+  font: 600 3.2vmin "Roboto";
+  letter-spacing: 2px;
+  color: #5e5e5e;
+  width: 100%;
+  text-align: right;
+  display: block;
+  /* border: 10px solid rgb(255, 5, 5); */
+}
+
+.orderDetailsCartItemsContainer > div {
+  display: flex;
+  font: 400 1vmax "Roboto";
+  align-items: center;
+  margin: 2vmax 0;
+  /* border: 10px solid rgb(255, 5, 5); */
+}
+
+.orderDetailsCartItemsContainer > div > a {
+  color: #575757;
+  font-size: 2.7vmin;
+  margin: 0 2vmax;
+  width: 60%;
+  text-decoration: none;
+  /* border: 10px solid rgb(255, 5, 5); */
+}

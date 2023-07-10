@@ -1,0 +1,70 @@
+/* for sidebar model  */
+
+.dashboardSidebarModal > div > {
+  max-width: 360px;
+  min-width: 360px;
+  height: 100vh;
+  min-height: 100%;
+}
+
+.dashboardSidebarModal > div > .dashboardSidebar {
+  background-color: rgb(255, 255, 255);
+  width: 350px;
+}
+
+.dashboardSidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dashboardSidebar > div {
+  display: flex;
+  flex-direction: column;
+  padding: 1vmax;
+  width: 100%;
+  min-height: 100%;
+}
+
+.dashboardSidebar > div > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  transition: 0.7s;
+  border-radius: 4px;
+  margin: 5px 0;
+  transition: all 0.2s;
+}
+
+.dashboardSidebar > div > a:hover {
+  filter: invert(100%);
+}
+
+.dashboardSidebar > div > a > svg {
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.dashboardSidebar > div > a > p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 6px;
+}
+
+@media screen and (max-width: 840px) {
+  #dashboard .dashboardSidebarContainer {
+    display: none;
+  }
+  .dashboardSidebar > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

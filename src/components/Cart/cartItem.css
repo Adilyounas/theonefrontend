@@ -1,0 +1,106 @@
+#item {
+  display: flex;
+  width: 90%;
+  margin: 1vmax 0;
+  border: 1px solid rgb(219, 219, 219);
+  box-shadow: 0 0 10px rgb(233, 233, 233);
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+/* it select 2 div */
+/* first one */
+#item > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#item > div > img {
+  width: 90px;
+  padding: 0.3vmax;
+  border-radius: 1vmax;
+}
+
+#item > div > div > h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2vmax;
+  margin: 0 1vmax;
+}
+
+#item > div > div > span {
+  font-family: "Roboto", "Helvetica Neue";
+  font-size: 1.6vmax;
+  color: tomato;
+  margin: 0 1vmax;
+}
+
+/* second one */
+#item > div:last-of-type {
+  min-width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#item > div > button {
+  padding: 10px 17px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#item > div > button:hover {
+  filter: invert();
+}
+
+
+#item > div > div .deleteIcon {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#item > div > div .deleteIcon:hover {
+  color: red;
+}
+
+@media screen and (max-width: 830px) {
+  #item {
+    width: 90%;
+  }
+  #item > div > div > h3 {
+    font-size: 2.5vmax;
+  }
+
+  #item > div > div > span {
+    font-size: 2vmax;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #item > div:last-of-type {
+    margin-right: 1vmax;
+  }
+  #item > div > img {
+    width: 13vmax;
+  }
+
+  #item > div > button {
+    padding: 1vmax 1.7vmax;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #item > div > div > h3 {
+    font-size: 2.2vmax;
+  }
+
+  #item > div > div > span {
+    font-size: 1.8vmax;
+  }
+
+  #item > div > img {
+    width: 10vmax;
+  }
+}

@@ -1,0 +1,20 @@
+.singleProductCarausol {
+  /* margin: 8vmax; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.singleProductCarausol > img {
+  width: 350px;
+}
+
+@media screen and (max-width: 930px) {
+  .singleProductCarausol > img {
+    width: 50vmax;
+  }
+  .singleProductCarausol {
+    padding-top: 3vmax;
+  }
+}

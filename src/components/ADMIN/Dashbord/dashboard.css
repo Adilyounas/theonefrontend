@@ -1,0 +1,241 @@
+#boxIcon {
+  fill: #ddea90;
+}
+
+#orderIcon {
+  fill: #fea4b9;
+}
+
+#userIcon {
+  fill: #ec8091;
+  font-size: 600px;
+  transform: scale(1.2);
+}
+
+#moneyIcon {
+  font-size: 60px;
+}
+
+#dashboardOptionsHideAndShow {
+  display: none !important;
+}
+
+#dashboardOptionsHideAndShow > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#dashboard {
+  display: flex;
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+#dashboard .dashboardSidebarContainer {
+  flex: 1;
+  border-right: 1px solid rgb(177, 177, 177);
+  min-width: 269px;
+  max-width: 269px;
+}
+
+#dashboard .dashboardMain {
+  flex: 4;
+}
+
+#dashboard .dashboardMain #dashboardnameContainer {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  /* width: 92%; */
+  /* border-radius: 5px; */
+  /* margin: 1vmax auto; */
+
+  background: linear-gradient(to right, #000000, #434343);
+}
+
+#dashboard .dashboardMain #dashboardnameContainer > h1 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 5vmax;
+  font-style: italic;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+#dashboardMajor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1vmax;
+  padding: 2vmax;
+}
+
+#dashboardMajor > a {
+  text-decoration: none;
+  width: 320px;
+  min-width: 320px;
+  height: 160px;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vmax;
+  border-radius: 0.6vmax;
+}
+
+#dashboardMajor > a > svg {
+  width: 50px;
+}
+
+#dashboardMajor > a > p {
+  font-family: "Barlow", sans-serif;
+  font-size: 2vmax;
+}
+
+#dashboardMajor > a > div > span {
+  font-family: "Barlow", sans-serif;
+  font-size: 23px;
+}
+
+#dashboardMajor > a > div > p {
+  font-family: "Barlow", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* {<---------------- categoryCalculation part------------->} */
+
+#categoryCalculation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 7vmax 0;
+}
+
+#categoryCalculation .heading {
+  background: linear-gradient(to right, #000000, #5e5d5d);
+  font-family: "Barlow", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 32px;
+  padding: 2vmax;
+  text-align: center;
+  width: 92%;
+  border-radius: 5px;
+  align-self: center;
+  letter-spacing: 3px;
+  font-style: italic;
+}
+
+#categoryCalculation .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 2vmax;
+}
+
+#categoryCalculation .items > span {
+  min-width: 180px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  padding: 1vmax 2vmax;
+}
+
+#categoryCalculation .items > span > h3 {
+  font-family: "Barlow", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+#categoryCalculation .items > span > p {
+  font-family: "Barlow", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* {<----------------Graph part------------->} */
+
+#graphContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3vmax;
+  padding: 5vmax 0;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+#graphContainer .lineChart {
+  width: 70%;
+}
+
+#graphContainer .graphChart {
+  width: 50%;
+}
+
+#graphContainer .lineChart >canvas {
+  border-radius: 10px;
+}
+
+#graphContainer .graphChart >canvas{
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 840px) {
+  #dashboardOptionsHideAndShow {
+    display: block !important;
+  }
+
+  #graphContainer .lineChart {
+    width: 80%;
+  }
+
+  #graphContainer .graphChart {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #dashboard .dashboardMain #dashboardnameContainer > h1 {
+    font-size: 8vmax;
+    padding: 2vmax 0;
+  }
+
+  #graphContainer .lineChart {
+    width: 80%;
+  }
+
+  #graphContainer .graphChart {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #dashboard .dashboardMain #dashboardnameContainer > h1 {
+    font-size: 8vmax;
+    padding: 2vmax 0;
+  }
+
+  #graphContainer .lineChart {
+    width: 90%;
+  }
+
+  #graphContainer .graphChart {
+    width: 70%;
+  }
+}

@@ -1,0 +1,36 @@
+#cardSkeleton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 260px;
+  max-width: 260px;
+  margin-top: -4vmax;
+}
+
+#cardSkeleton > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: -10vmin;
+}
+
+#cardSkeleton > div:last-child > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cardSkeleton > div:last-child > h3 {
+  margin-top: -5px;
+}
+
+#cardSkeleton > div:last-child > p {
+  margin-top: -5px;
+}
+
+#cardSkeleton > div:last-child > span {
+  margin-top: -20px;
+}

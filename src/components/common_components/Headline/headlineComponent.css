@@ -1,0 +1,44 @@
+.featureBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vmax;
+}
+
+.featureBox > span {
+  height: 1px;
+  width: 26vmax;
+}
+
+.featureBox > div > h2 {
+  padding: 0 2vmax;
+  font-size: 3.7vmax;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 300;
+  width: fit-content;
+}
+
+@media screen and (max-width: 768px) {
+  .featureBox > div > h2 {
+    font-size: 4vmax;
+  }
+
+  .featureBox > div {
+    position: relative;
+  }
+
+  .featureBox > div > h2 {
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .featureBox > span {
+    height: 1px;
+    width: 15vmax;
+  }
+}

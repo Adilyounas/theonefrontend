@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Comfortaa:wght@300;400;500;600;700&family=Cute+Font&family=Expletus+Sans:wght@400;500;600;700&family=Instrument+Serif&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+#account {
+  min-height: 100vh;
+  max-width: 100%;
+  /* border: 1px solid red; */
+}
+
+#account > span {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#account > span > img {
+  width: 20vw;
+  border-radius: 50%;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+#account > div {
+  width: 100%;
+  height: 35vw;
+}
+
+
+
+
+#account > .box1 {
+  /* border: 1px solid red; */
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgb(54, 54, 54);
+
+}
+
+#account > .box1 > img {
+  width: 100vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#account > .box2 {
+  /* border: 1px solid rgb(0, 255, 115); */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 100%;
+  margin-top: 15vw;
+}
+
+#account > .box2 > div {
+  /* border: 1px solid rgb(0, 255, 115); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#account > .box2 > div >h4{
+  font-size: 4.2vh;
+  letter-spacing: 2px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#account > .box2 > div >p{
+  font-size: 23px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+
+
+#account > .box2 > a {
+  position: relative;
+  margin: 10px;
+  padding: 13px 0;
+  width: 35vh;
+  text-align: center;
+  font-family: "Expletus Sans", cursive;
+  /* border-radius: 5px; */
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Expletus Sans", cursive;
+  transition: .5s;
+}
+
+#account > .box2 >a:hover {
+  outline: 1px solid rgb(255, 255, 255);
+  filter: invert();
+  transform: scale(1.1);
+
+}
+
+@media screen and (max-width: 900px) {
+  #account > span > img {
+    width: 25vw;
+  }
+  #account > div {
+    width: 100%;
+    height: 43vw;
+  }
+  
+
+ 
+}
+
+@media screen and (max-width: 760px) {
+ 
+
+  #account > .box2 > div >h4{
+    font-size: 3.5vmax;
+    color: red;
+  }
+
+  #account > .box2 > div >p{
+    font-size: 19px;
+  }
+
+  #account > .box2 > a {
+    
+    width: 30vh;
+   
+  }
+  
+}

@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Comfortaa:wght@300;400;500;600;700&family=Cute+Font&family=Expletus+Sans:wght@400;500;600;700&family=Instrument+Serif&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+.aboutUsMainContainer {
+  display: flex;
+  max-width: 100%;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10vmax;
+}
+
+.aboutUsMainContainer > div {
+  width: 50vw;
+  padding: 2vmax;
+}
+
+.aboutUsMainContainer > div > h2 {
+  text-transform: capitalize;
+  font-family: "Comfortaa", cursive;
+  font-size: 6vmin;
+}
+
+.aboutUsMainContainer > div > p {
+  text-transform: capitalize;
+  font-family: "Comfortaa", cursive;
+  font-size: 3vmin;
+}
+
+.aboutUsMainContainer > div > img {
+  width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .aboutUsMainContainer {
+    display: flex;
+    margin: 2vmax 0;
+   
+    flex-direction: column !important;
+  }
+
+
+}

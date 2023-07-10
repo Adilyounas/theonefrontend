@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Comfortaa:wght@300;400;500;600;700&family=Cute+Font&family=Expletus+Sans:wght@400;500;600;700&family=Instrument+Serif&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+#contactUs > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 200vh;
+  max-width: 100%;
+}
+
+#contactUs > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#contactUs > div > h1 {
+  font-size: 7vmax;
+  font-family: "Comfortaa", cursive;
+}
+
+#contactUs > div > h2 {
+  font-size: 3.5vmax;
+  font-family: "Comfortaa", cursive;
+}
+
+#contactUs > div > p {
+  font-size: 1.8vmax;
+  font-family: "Comfortaa", cursive;
+}
+
+#contactUs > div > img {
+  width: 30vmax;
+  z-index: 0;
+  filter: drop-shadow(1px 10px lightskyblue) invert(1);
+}
+
+#contactUs > div > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#contactUs > div > form > input {
+  padding: 1vmax;
+  margin: 1vmax;
+  font-size: 16px;
+  width: 50%;
+  font-family: "Comfortaa", cursive;
+  border-radius: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#contactUs > div > form > button {
+  margin: 5vmax;
+}
+
+#contactUs > div > form > input::placeholder {
+  color: rgb(185, 185, 185);
+  font-size: 14px;
+}
+
+#contactUs > div > form > textarea {
+  font-size: 18px;
+  width: 50%;
+  padding: 1vmax;
+  border-radius: 5px;
+}
+
+#contactUs > div > form > textarea::placeholder {
+  color: rgb(182, 182, 182);
+  padding: 1vmax;
+}
+
+@media screen and (max-width: 550px) {
+  #contactUs > div > form > input {
+    width: 80%;
+  }
+  #contactUs > div > form > textarea {
+    font-size: 18px;
+    width: 80%;
+    padding: 1vmax;
+    border-radius: 5px;
+  }
+}

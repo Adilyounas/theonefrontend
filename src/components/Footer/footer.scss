@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+.footer > #section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4vmax 3vmax;
+  flex-wrap: wrap;
+}
+
+.footer > #section > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vmax 0;
+  min-width: 250px;
+}
+
+.footer > #section > div > div:nth-child(1) > svg {
+  font-size: 3vmax;
+  transition: 0.3s;
+}
+
+.footer > #section > div > div:nth-child(2) > h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.footer > #section > div > div:nth-child(2) > p {
+  font-family: "Source Sans Pro", sans-serif;
+  transition: 0.3s;
+  font-size: 1.2vmax;
+}
+
+// {<-----------inline classe--------->}
+.darkColorHover {
+  color: white;
+  transition: 0.3s;
+}
+
+.darkColorHover:hover {
+  color: rgb(153, 153, 153);
+}
+
+.lightColorHover {
+  color: rgb(100, 100, 100);
+  transition: 0.3s;
+}
+
+.lightColorHover:hover {
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .footer > #section > div > div:nth-child(1) > svg {
+    font-size: 5vmax;
+  }
+
+  .footer > #section > div > div:nth-child(2) > p {
+    font-size: 1.6vmax;
+  }
+}
+
+// {<-----------SECTION 2--------->}
+.footer #section2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8vmax;
+  flex-wrap: wrap;
+}
+
+// is k andar 4 divs aty hn
+
+.footer #section2 > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1vmax;
+}
+
+.footer #section2 > div > h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+}
+
+.footer #section2 > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.footer #section2 > div > div > input {
+  padding: 14px 16px;
+  font-size: 15px;
+  min-width: 300px;
+}
+
+.footer #section2 > div > div > div svg {
+  font-size: 35px;
+  color: black;
+  transform: translateX(-35px);
+  cursor: pointer;
+}
+
+.footer #section2 > div > p {
+  line-height: 2;
+}
+
+.footer #section2 div:nth-child(4) {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer #section2 div:nth-child(4) > a > svg {
+  font-size: 25px;
+  margin: 1vmax;
+}
+
+@media screen and (max-width: 821px) {
+  .footer #section2 div:nth-child(4) > svg {
+    font-size: 4vmax;
+  }
+  .footer #section2 > div > div > input {
+    padding: 1.3vmax 1.4vmax;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .footer #section2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer #section2 > div > h3 {
+    text-align: center;
+  }
+
+  .footer #section2 > div > p {
+    text-align: center;
+  }
+  .footer #section2 > div > div > input {
+    padding: 1.8vmax 1.6vmax;
+    font-size: 2vmax;
+  }
+}
+
+// {<----------------------SECTION 3---------------->}
+
+.footer #section3 {
+  width: 100%;
+  padding: 3vmax;
+}
+
+.footer #section3 > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer #section3 > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer #section3 > div > div > p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 1vmax 0;
+  font-size: 1.8vmax;
+}
+
+.footer #section3 > div > div > a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  text-decoration: none;
+  font-size: 1.4vmax;
+  padding: 0.5vmax 0;
+}
+
+@media screen and (max-width: 860px) {
+  .footer #section3 > div > div > p {
+    font-size: 2.2vmax;
+    font-weight: 600;
+  }
+
+  .footer #section3 > div > div > a {
+    font-size: 1.7vmax;
+    padding: 0.8vmax 0;
+  }
+}
+// {<--------------------SECTION 4------------->}
+
+.footer #section4 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+}
+
+.footer #section4 > div {
+  border-top: 1px solid black;
+  width: 80%;
+}
+
+.footer #section4 > div > p {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 3.2vmin;
+}

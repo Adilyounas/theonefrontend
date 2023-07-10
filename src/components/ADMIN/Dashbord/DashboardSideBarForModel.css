@@ -1,0 +1,60 @@
+/* ------------main model id..... */
+#dashboardSidebarModal {
+  transition: 5s;
+}
+
+/* ------------side bar for model..... */
+
+#DashboardSideBarForModel {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 269px;
+  max-width: 269px;
+  background-color: white;
+}
+
+#DashboardSideBarForModel > span {
+  align-self: flex-end;
+  margin: 3vmax 4vmax;
+}
+
+#DashboardSideBarForModel > span > svg {
+  font-size: 45px;
+  color: red;
+  cursor: pointer;
+}
+
+#DashboardSideBarForModel > div {
+  width: 100%;
+}
+
+#DashboardSideBarForModel > div > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  transition: 0.7s;
+  border-radius: 4px;
+  margin: 10px 0;
+  transition: all 0.2s;
+  padding: 0 1vmax;
+}
+
+#DashboardSideBarForModel > div > a:hover {
+  filter: invert(100%);
+}
+
+#DashboardSideBarForModel > div > a > svg {
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+#DashboardSideBarForModel > div > a > p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 6px;
+}

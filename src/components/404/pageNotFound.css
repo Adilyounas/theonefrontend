@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Comfortaa:wght@300;400;500;600;700&family=Cute+Font&family=Expletus+Sans:wght@400;500;600;700&family=Instrument+Serif&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+.pageNotFoundContainer{
+height: 100vh;
+max-width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.pageNotFoundContainer >h1{
+    font-family: "Comfortaa", cursive;
+    font-size: 5vmax;
+}
+

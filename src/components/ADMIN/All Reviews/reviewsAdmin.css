@@ -1,0 +1,47 @@
+#reviewFormForAdmin {
+  height: 30vh;
+  border: 1px solid rgb(163, 163, 163);
+  min-width: 370px;
+  max-width: 370px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2vmax;
+  margin-bottom: 2vmax;
+}
+
+#reviewFormForAdmin > span {
+  position: relative;
+}
+
+#reviewFormForAdmin > span > svg {
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform: translate(0%, -40%);
+}
+
+#reviewFormForAdmin > span > input {
+  padding-left: 40px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  width: 100%;
+  font-size: 17px;
+}
+
+#reviewFormForAdmin > button {
+  padding: 10px 20px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#reviewFormForAdmin > button:hover {
+  filter: invert();
+}

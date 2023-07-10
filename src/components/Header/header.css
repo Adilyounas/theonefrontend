@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+.headerContainer {
+  max-height: 100vh;
+  width: 100%;
+}
+.burgerIcon {
+  font-size: 50px !important;
+}
+
+.closeIcon {
+  font-size: 4vmax !important;
+}
+
+.modalContainer {
+  background-color: rgb(31, 31, 31);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContainer > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.modalContainer > ul > li > a > img {
+  width: 15vmax !important;
+  filter: invert();
+}
+.modalContainer > ul > li {
+  list-style: none;
+}
+
+.modalContainer > ul > li > a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.3vmax;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  transition: 0.2s linear;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 12vmax;
+}
+
+.iconContainer > a {
+  text-decoration: none;
+  color: white;
+}
+
+.iconContainer > a > svg {
+  font-size: 3vmax;
+}
+
+.iconContainer > a > span > svg {
+  font-size: 3vmax;
+}
+
+.modalContainer > ul > li > a[class="active"] {
+  color: red !important;
+  display: inline-block;
+  font-weight: 300;
+}
+
+/* drawer part here */
+.drawerContainer {
+  width: 360px;
+  height: 100%;
+  z-index: 14000;
+}
+
+.drawerContainer > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vmax;
+  border-bottom: 1px solid rgb(121, 119, 119);
+}
+
+.drawerContainer > div:nth-child(1) > p {
+  font-size: 1.7vmax;
+  font-family: "Roboto", sans-serif;
+}
+
+.drawerContainer > div:nth-child(1) > button > span {
+  margin: 0;
+}
+
+.drawerContainer > div:nth-child(2) {
+  padding: 2vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.drawerContainer > div:nth-child(2) > p {
+  font-size: 1.2vmax;
+  font-family: "Roboto", sans-serif;
+}
+
+.drawerContainer > div:nth-child(2) > div {
+  border: 1px solid rgb(159, 159, 235);
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.8vmax 0;
+}
+
+.drawerContainer > div:nth-child(2) > div > button {
+  width: 100%;
+  font-size: 1.3vmax;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+.drawerContainer > div:nth-child(2) > div > button > span > svg {
+  font-size: 2vmax;
+}
+
+.drawerContainer > div:nth-child(2) > div > span {
+  min-width: 2px;
+  display: flex;
+  background-color: rgb(109, 107, 107) !important;
+}
+
+/* 3rd div */
+
+.drawerContainer > div:nth-child(3) {
+  padding: 2vmax;
+}
+
+.drawerContainer > div:nth-child(3) > div {
+  margin: 0.8vmax 0;
+  width: 100%;
+  height: 100%;
+  margin: 1.5vmax 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.drawerContainer > div:nth-child(3) > div > div {
+  width: 50px;
+  border-radius: 50%;
+  height: 50px;
+  margin: 0.3vmax;
+  color: transparent;
+}
+
+.drawerContainer > div:nth-child(3) > p {
+  font-size: 1.2vmax;
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 730px) {
+  .modalContainer > ul {
+    flex-direction: column;
+  }
+
+  .modalContainer > ul > li {
+    margin: 3.5vmax;
+  }
+
+  .modalContainer > ul > li > a {
+    font-size: 3vmax;
+  }
+
+  .modalContainer > ul > li > a > img {
+    width: 20vmax !important;
+  }
+
+  .iconContainer > a > svg {
+    font-size: 4vmax;
+  }
+
+  .iconContainer > a > span > svg {
+    font-size: 4vmax;
+  }
+
+  .iconContainer {
+    width: 17vmax;
+  }
+}
+
+/* drawer media queries */
+
+@media screen and (max-width: 900px) {
+  .drawerContainer > div:nth-child(2) > div > button {
+    font-size: 1.8vmax;
+  }
+  .drawerContainer > div:nth-child(1) > p {
+    font-size: 2.3vmax;
+  }
+
+  .drawerContainer > div:nth-child(2) > p {
+    font-size: 1.7vmax;
+  }
+  .drawerContainer > div:nth-child(3) > p {
+    font-size: 1.7vmax;
+  }
+  .drawerContainer > div:nth-child(2) > div > button > span > svg {
+    font-size: 2.8vmax;
+  }
+
+  .burgerIcon {
+    font-size: 5vmax !important;
+  }
+
+  .closeIcon {
+    font-size: 4.6vmax !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .drawerContainer > div:nth-child(2) > div > button {
+    font-size: 2.2vmax;
+  }
+
+  .drawerContainer > div:nth-child(2) > div > button > span > svg {
+    font-size: 3vmax;
+  }
+
+  .drawerContainer > div:nth-child(1) > p {
+    font-size: 3vmax;
+  }
+
+  .drawerContainer > div:nth-child(2) > p {
+    font-size: 2.4vmax;
+  }
+  .drawerContainer > div:nth-child(3) > p {
+    font-size: 2.4vmax;
+  }
+
+  .burgerIcon {
+    font-size: 5.5vmax !important;
+  }
+
+  .closeIcon {
+    font-size: 5.1vmax !important;
+  }
+}

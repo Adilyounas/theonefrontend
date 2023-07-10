@@ -1,0 +1,14 @@
+
+
+#updateOrderSelect{
+    padding: 15px 30px;
+    font-size: 17px;
+    cursor: pointer;
+    border: 1px solid rgb(156, 156, 156);
+    margin: 5vmax 0;
+}
+
+#updateOrderSelect >option{
+    margin: 1vmax 0;
+}
+

@@ -1,0 +1,63 @@
+
+.greenColor{
+    color: green;
+}
+
+.redColor{
+    color: green;
+}
+
+
+
+
+
+#productList{
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+
+#productList >p{
+    font-size: 5vmax;
+    padding: 7vh 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#productList .productListTable{
+    min-width: 90vw;
+    max-width: 90vw;
+
+}
+
+#productList #noProductCreated{
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
+width: 100%;
+height: 100vh;
+}
+
+
+.launchIcon{
+    cursor: pointer;
+    color: black;
+
+}
+
+.actiondeleteBtn{
+    cursor: pointer;
+    color: black;
+}
+
+.launchIcon:hover{
+    color: red;
+
+}
+
+.actiondeleteBtn:hover{
+    color: red;
+}

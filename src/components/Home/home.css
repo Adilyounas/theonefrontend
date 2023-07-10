@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Cute+Font&family=Expletus+Sans:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+.home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#box1 > div {
+  content: "";
+  position: absolute;
+  width: 65vmin;
+  height: 65vmin;
+  top: 20%;
+  left: 30%;
+
+  z-index: 10;
+  border-radius: 50%;
+  filter: contrast(100%);
+}
+
+#box1 > img {
+  height: 100vh;
+  filter: contrast(200%) grayscale(100%);
+  z-index: 15;
+  transform: translateX(5vmax);
+}
+
+#box2 {
+  width: 100%;
+  z-index: 20;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 6vmax;
+  margin-right: 100px;
+}
+
+#box2 > h1 {
+  font-size: 5vmax;
+  font-weight: 100;
+  mix-blend-mode: hue;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-style: italic;
+}
+
+#box2 > p {
+  font-size: 17px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#box2 > a {
+  font-size: 1.3vmax;
+  padding: 1vmax 2vmax;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  outline: 1px solid black;
+  font-family: "Expletus Sans", cursive;
+  transition: 0.1s;
+  border-radius: 3px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#box2 > a:active {
+  filter: none !important;
+  cursor: pointer;
+  transform: translateY(5px);
+}
+
+#box2 > a,
+p,
+h1 {
+  margin: 1vmax 0;
+}
+
+@media screen and (max-width: 1000px) {
+  #box2 > h1 {
+    font-size: 5.5vmax;
+  }
+
+  #box2 > p {
+    font-size: 14px;
+  }
+
+  #box2 > a {
+    font-size: 2vmax;
+  }
+
+  #box1 > div {
+    width: 65vmin;
+    height: 65vmin;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .home {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+
+  #box2 {
+    height: 70vh;
+    padding: 5vmax;
+    width: 80%;
+    margin-right: 0vmax;
+  }
+
+  #box2 > a {
+    padding: 1vmax 1.7vmax;
+    font-size: 2.3vmax;
+  }
+
+  #box1 > img {
+    transform: translateX(0vmax);
+  }
+
+  #box1 > div {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vmin;
+    height: 60vmin;
+  }
+}
+
+/* ////////////////////////////////  MORE BTN */
+
+.morebtn {
+  padding: 5vmax;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.morebtn > a {
+  outline: 1px solid black;
+  border: none;
+
+  font-family: "Expletus Sans", cursive;
+  transition: 0.1s;
+  border-radius: 3px;
+  font-size: 1.3vmax;
+  padding: 1vmax 2vmax;
+  font-weight: 400;
+  color: black;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.morebtn > a:hover {
+  cursor: pointer;
+}
+
+.morebtn > a:active {
+  filter: none !important;
+  cursor: pointer;
+  transform: translateY(5px);
+}
+
+@media screen and (max-width: 900px) {
+  .morebtn > a {
+    font-size: 1.7vmax;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .morebtn > a {
+    font-size: 2.2vmax;
+  }
+}
+
+@media screen and (max-width: 60px) {
+  .morebtn > a {
+    font-size: 2.5vmax;
+  }
+}

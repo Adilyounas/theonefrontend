@@ -1,0 +1,29 @@
+/* main speed dial */
+.MuiSpeedDial-fab {
+  background-color: white !important;
+}
+
+/* below background color */
+.MuiSpeedDialAction-fab {
+  background-color: white !important;
+  transition: 0.5s !important;
+}
+
+.MuiSpeedDialAction-fab:hover {
+  transform: scale(1.3);
+  filter: invert() !important;
+}
+
+.MuiSpeedDialAction-fab > svg {
+  color: rgb(0, 0, 0) !important;
+}
+
+/* label */
+.MuiSpeedDialAction-staticTooltipLabel {
+  background-color: rgb(233, 233, 233) !important;
+  color: black !important;
+}
+
+#speedDialImage {
+  width: 100%;
+}
