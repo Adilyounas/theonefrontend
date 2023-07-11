@@ -18,7 +18,7 @@ export const putLikeAndDislike =
       };
 
       const { data } = await axios.put(
-        `http://www.api.warriordev.tech/api/v1/likeAndDislike`,
+        `http://api.warriordev.tech/api/v1/likeAndDislike`,
         { productId, likeAndDislike },
         config
       );

@@ -15,7 +15,7 @@ export const loadUser = () => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
     dispatch(LoadUserInitializeStates())
-    const { data } = await axios.get(`http://www.api.warriordev.tech/api/v1/myDetails`);
+    const { data } = await axios.get(`http://api.warriordev.tech/api/v1/myDetails`);
     dispatch(GeneralLoadingFalse());
     dispatch(LoadUserRequestSuccess(data));
   } catch (error) {

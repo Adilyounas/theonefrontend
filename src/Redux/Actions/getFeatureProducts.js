@@ -14,7 +14,7 @@ import {
 export const getFeatureProducts = () => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.get(`http://www.api.warriordev.tech/api/v1/allProducts`);
+    const { data } = await axios.get(`http://api.warriordev.tech/api/v1/allProducts`);
 
     dispatch(getFeatureProductsRequestSuccess(data));
     dispatch(GeneralLoadingFalse());

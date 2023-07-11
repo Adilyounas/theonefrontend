@@ -21,7 +21,7 @@ export const deleteOrder_admin = (orderId) => async (dispatch) => {
        
       }
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.delete(`http://www.api.warriordev.tech/api/v1/admin/deleteOrder/${orderId}`,config);
+    const { data } = await axios.delete(`http://api.warriordev.tech/api/v1/admin/deleteOrder/${orderId}`,config);
     console.log(data);
     dispatch(deleteOrder_Admin_RequestSuccess(data));
 

@@ -14,7 +14,7 @@ import {
 export const myOrdersAction = () => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.get(`http://www.api.warriordev.tech/api/v1/myOrders`);
+    const { data } = await axios.get(`http://api.warriordev.tech/api/v1/myOrders`);
     dispatch(myOrdersRequestSuccess(data));
     dispatch(GeneralLoadingFalse());
   } catch (error) {
@@ -30,7 +30,7 @@ export const myOrdersAction = () => async (dispatch) => {
 export const singleOrderAction = (orderId) => async (dispatch) => {
     try {
       dispatch(GeneralLoadingTrue());
-      const { data } = await axios.get(`http://www.api.warriordev.tech/api/v1/order/${orderId}`);
+      const { data } = await axios.get(`http://api.warriordev.tech/api/v1/order/${orderId}`);
       dispatch(singleOrderRequestSuccess(data));
       dispatch(GeneralLoadingFalse());
     } catch (error) {

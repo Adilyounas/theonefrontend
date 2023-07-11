@@ -15,7 +15,7 @@ import {
 export const getOrderListAction = () => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.get(`http://www.api.warriordev.tech/api/v1/admin/getAllOrders`);
+    const { data } = await axios.get(`http://api.warriordev.tech/api/v1/admin/getAllOrders`);
     dispatch(allOrder_Admin_initialize());
 
     dispatch(allOrder_Admin_RequestSuccess(data));

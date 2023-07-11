@@ -25,7 +25,7 @@ try {
     dispatch(GeneralLoadingTrue());
 
     const { data } = await axios.put(
-      `http://www.api.warriordev.tech/api/v1/updatePassword`,
+      `http://api.warriordev.tech/api/v1/updatePassword`,
       formData,
       config
     );

@@ -21,7 +21,7 @@ export const forgotPassword = (formData) => async (dispatch) => {
 
     dispatch(GeneralLoadingTrue());
 
-    const { data } = await axios.post(`http://www.api.warriordev.tech/api/v1/forgotPassword`,formData, config);
+    const { data } = await axios.post(`http://api.warriordev.tech/api/v1/forgotPassword`,formData, config);
 
     dispatch(forgotPasswordRequestSuccess(data));
     dispatch(GeneralLoadingFalse());

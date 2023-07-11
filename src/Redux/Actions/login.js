@@ -17,9 +17,9 @@ export const loginUser = (formData) => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
     const config = { headers: { "Content-Type": "application/json" } };
-    const { data } = await axios.post(`http://www.api.warriordev.tech/api/v1/login`, formData, config);
+    const { data } = await axios.post(`http://api.warriordev.tech/api/v1/login`, formData, config);
     // dispatch(LoadUserInitializeStates())
-    const { data:data2 } = await axios.get(`http://www.api.warriordev.tech/api/v1/myDetails`);
+    const { data:data2 } = await axios.get(`http://api.warriordev.tech/api/v1/myDetails`);
     dispatch(LoginRequestSuccess(data));
     dispatch(LoadUserRequestSuccess(data2));
     dispatch(GeneralLoadingFalse());

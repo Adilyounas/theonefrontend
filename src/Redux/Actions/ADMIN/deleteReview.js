@@ -18,7 +18,7 @@ export const deleteReview_admin = (productId,reviewId) => async (dispatch) => {
        
       }
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.delete(`http://www.api.warriordev.tech/api/v1/admin/deleteReview?productId=${productId}&id=${reviewId}`,config);
+    const { data } = await axios.delete(`http://api.warriordev.tech/api/v1/admin/deleteReview?productId=${productId}&id=${reviewId}`,config);
     if (data.success===true) {
         toast.success(data.reviews);
     }
