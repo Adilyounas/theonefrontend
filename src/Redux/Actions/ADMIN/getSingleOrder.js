@@ -13,7 +13,7 @@ export const getSingleOrder_admin_Action = (orderId) => async (dispatch) => {
 
     
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.get(`http://api.warriordev.tech/api/v1/order/${orderId}`);
+    const { data } = await axios.get(`https://api.warriordev.tech/api/v1/order/${orderId}`);
     dispatch(singleOrder_Admin_RequestSuccess(data));
     console.log(data);
     dispatch(GeneralLoadingFalse());

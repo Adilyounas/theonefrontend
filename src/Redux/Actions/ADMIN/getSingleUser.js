@@ -13,7 +13,7 @@ import {
 export const getSingleUser_admin_Action = (userId) => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.get(`http://api.warriordev.tech/api/v1/admin/getSingleUser/${userId}`);
+    const { data } = await axios.get(`https://api.warriordev.tech/api/v1/admin/getSingleUser/${userId}`);
     dispatch(singleUser_Admin_RequestSuccess(data));
     dispatch(GeneralLoadingFalse());
   } catch (error) {

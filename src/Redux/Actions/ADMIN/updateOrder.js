@@ -17,7 +17,7 @@ export const updateOrderAction_admin = (orderId,formData) => async (dispatch) =>
       },
     }
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.put(`http://api.warriordev.tech/api/v1/admin/updateOrder/${orderId}`,formData,config);
+    const { data } = await axios.put(`https://api.warriordev.tech/api/v1/admin/updateOrder/${orderId}`,formData,config);
     if (data.success===true) {
         toast.success(data.message);
     }

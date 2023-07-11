@@ -21,7 +21,7 @@ export const deleteUser_admin = (userId) => async (dispatch) => {
        
       }
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.delete(`http://api.warriordev.tech/api/v1/admin/deleteUser/${userId}`,config);
+    const { data } = await axios.delete(`https://api.warriordev.tech/api/v1/admin/deleteUser/${userId}`,config);
     dispatch(deleteUser_Admin_RequestSuccess(data));
 
     if (data.success===true) {

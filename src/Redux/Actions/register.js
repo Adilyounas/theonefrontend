@@ -23,8 +23,8 @@ export const registerUser = (formData) => async (dispatch) => {
           "Content-Type": "multipart/form-data",
         },
       };
-    const { data } = await axios.post(`http://api.warriordev.tech/api/v1/register`, formData, config);
-    const { data:data2 } = await axios.get(`http://api.warriordev.tech/api/v1/myDetails`);
+    const { data } = await axios.post(`https://api.warriordev.tech/api/v1/register`, formData, config);
+    const { data:data2 } = await axios.get(`https://api.warriordev.tech/api/v1/myDetails`);
     dispatch(registerRequestSuccess(data));
     dispatch(LoadUserRequestSuccess(data2));
 

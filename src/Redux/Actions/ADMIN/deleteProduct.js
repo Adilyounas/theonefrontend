@@ -20,7 +20,7 @@ export const deleteProduct_admin = (productId) => async (dispatch) => {
     };
     dispatch(GeneralLoadingTrue());
     const { data } = await axios.delete(
-      `http://api.warriordev.tech/api/v1/admin/deleteProduct/${productId}`,
+      `https://api.warriordev.tech/api/v1/admin/deleteProduct/${productId}`,
       config
     );
     if (data.success === true) {

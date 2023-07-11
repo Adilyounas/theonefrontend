@@ -15,7 +15,7 @@ import {
 export const getProductListAction = () => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.get(`http://api.warriordev.tech/api/v1/admin/allProducts`);
+    const { data } = await axios.get(`https://api.warriordev.tech/api/v1/admin/allProducts`);
     dispatch(allProducts_Admin_initializing());
 
     dispatch(allProducts_Admin_RequestSuccess(data));
