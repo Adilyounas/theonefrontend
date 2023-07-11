@@ -25,7 +25,7 @@ try {
     dispatch(GeneralLoadingTrue());
 
     const { data } = await axios.put(
-      `/api/v1/updateProfile`,
+      `http://www.api.warriordev.tech/api/v1/updateProfile`,
       formData,
       config
     );

@@ -13,7 +13,7 @@ import {
 export const addToCartAction = (productId,quantity) => async (dispatch,getState) => {
   try {
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.get(`/api/v1/singleProduct/${productId}`);
+    const { data } = await axios.get(`http://www.api.warriordev.tech/api/v1/singleProduct/${productId}`);
 
 
     

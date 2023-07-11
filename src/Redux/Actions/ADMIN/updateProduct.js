@@ -17,7 +17,7 @@ export const updateProductAction_admin = (productId,formData) => async (dispatch
       },
     }
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.put(`/api/v1/admin/updateProduct/${productId}`,formData,config);
+    const { data } = await axios.put(`http://www.api.warriordev.tech/api/v1/admin/updateProduct/${productId}`,formData,config);
     if (data.success===true) {
         toast.success(data.message);
     }

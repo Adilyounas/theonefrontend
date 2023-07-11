@@ -15,7 +15,7 @@ import {
 export const getUserListAction = () => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.get(`/api/v1/admin/getAllUsers`);
+    const { data } = await axios.get(`http://www.api.warriordev.tech/api/v1/admin/getAllUsers`);
     dispatch(allUser_Admin_initiated());
 
     dispatch(allUser_Admin_RequestSuccess(data));

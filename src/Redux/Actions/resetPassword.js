@@ -21,7 +21,7 @@ export const resetPassword = (formData,token) => async (dispatch) => {
 
     dispatch(GeneralLoadingTrue());
     const { data } = await axios.put(
-      `/api/v1/resetPassword/${token}`,
+      `http://www.api.warriordev.tech/api/v1/resetPassword/${token}`,
       formData,
       config
     );

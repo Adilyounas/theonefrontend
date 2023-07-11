@@ -21,7 +21,7 @@ export const sendEamilAction =
       };
 
       const { data } = await axios.post(
-        `/api/v1/sendEamilForSale`,{email},
+        `http://www.api.warriordev.tech/api/v1/sendEamilForSale`,{email},
         config
       );
 
