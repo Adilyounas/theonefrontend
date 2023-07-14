@@ -28,7 +28,7 @@ export const registerUser = (formData) => async (dispatch) => {
     };
     const { data } = await axios.post(`https://api.warriordev.tech/api/v1/register`, formData, config);
     
-    Cookies.set('token', data.token, { expires: 864000 });
+    Cookies.set('token', data.token, { expires: 864000, secure: true, sameSite: 'None'  });
 
 
 

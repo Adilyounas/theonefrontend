@@ -24,7 +24,7 @@ export const loginUser = (formData) => async (dispatch) => {
     const config = { headers: { "Content-Type": "application/json" } };
     const { data } = await axios.post(`https://api.warriordev.tech/api/v1/login`, formData, config);
     
-    Cookies.set('token', data.token, { expires: 864000 });
+    Cookies.set('token', data.token, { expires: 864000 ,secure: true, sameSite: 'None'  });
 
 
     // dispatch(LoadUserInitializeStates())
