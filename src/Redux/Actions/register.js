@@ -15,6 +15,11 @@ import {
   GeneralLoadingFalse,
 } from "../Reducers/generalLoading";
 
+
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
+
+
 export const registerUser = (formData) => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
@@ -24,6 +29,14 @@ export const registerUser = (formData) => async (dispatch) => {
         },
       };
     const { data } = await axios.post(`https://api.warriordev.tech/api/v1/register`, formData, config);
+
+
+    cookies.set('token', data.token, { path: '/', maxAge: 864000 });
+
+
+
+
+
     const { data:data2 } = await axios.get(`https://api.warriordev.tech/api/v1/myDetails`);
     dispatch(registerRequestSuccess(data));
     dispatch(LoadUserRequestSuccess(data2));
