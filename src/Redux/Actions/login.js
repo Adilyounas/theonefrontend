@@ -1,7 +1,7 @@
 import { toast } from "react-hot-toast";
 import { LoginRequestSuccess, LoginRequestFail } from "../Reducers/login";
 import axios from "axios";
-import Cookies from 'universal-cookie';
+
 
 import {
 
@@ -15,6 +15,8 @@ import {
 } from "../Reducers/generalLoading";
 
 
+import Cookies from 'js-cookie';
+
 
 export const loginUser = (formData) => async (dispatch) => {
   try {
@@ -22,8 +24,7 @@ export const loginUser = (formData) => async (dispatch) => {
     const config = { headers: { "Content-Type": "application/json" } };
     const { data } = await axios.post(`https://api.warriordev.tech/api/v1/login`, formData, config);
     
-    const cookies = new Cookies();
-    cookies.set('token', data.token, { path: '/', maxAge: 864000 });
+    Cookies.set('token', data.token, { expires: 864000 });
 
 
     // dispatch(LoadUserInitializeStates())
