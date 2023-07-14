@@ -1,6 +1,7 @@
 import { toast } from "react-hot-toast";
 import { LoginRequestSuccess, LoginRequestFail } from "../Reducers/login";
 import axios from "axios";
+import Cookies from 'universal-cookie';
 
 import {
 
@@ -14,7 +15,6 @@ import {
 } from "../Reducers/generalLoading";
 
 
-import Cookies from 'universal-cookie';
 
 export const loginUser = (formData) => async (dispatch) => {
   try {
