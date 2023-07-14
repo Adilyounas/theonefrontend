@@ -17,19 +17,19 @@ import {
 
 
 import Cookies from 'universal-cookie';
-const cookies = new Cookies();
 
 export const registerUser = (formData) => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
     const config = {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      };
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    };
     const { data } = await axios.post(`https://api.warriordev.tech/api/v1/register`, formData, config);
-
-
+    
+    
+    const cookies = new Cookies();
     cookies.set('token', data.token, { path: '/', maxAge: 864000 });
 
 

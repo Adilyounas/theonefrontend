@@ -12,15 +12,17 @@ import {
   GeneralLoadingTrue,
   GeneralLoadingFalse,
 } from "../Reducers/generalLoading";
+
+
 import Cookies from 'universal-cookie';
-const cookies = new Cookies();
 
 export const loginUser = (formData) => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
     const config = { headers: { "Content-Type": "application/json" } };
     const { data } = await axios.post(`https://api.warriordev.tech/api/v1/login`, formData, config);
-
+    
+    const cookies = new Cookies();
     cookies.set('token', data.token, { path: '/', maxAge: 864000 });
 
 
