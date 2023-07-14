@@ -19,7 +19,6 @@ import {
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
-
 export const registerUser = (formData) => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
