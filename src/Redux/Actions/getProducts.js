@@ -17,18 +17,18 @@ export const getProducts =
   ) =>
   async (dispatch) => {
     try {
-      let link = `http://api.warriordev.tech/api/v1/allProducts?page=${pagination}&ratings[gte]=${rating}&price[gte]=${sliderValue[0]}&price[lte]=${sliderValue[1]} `;
+      let link = `https://api.warriordev.tech/api/v1/allProducts?page=${pagination}&ratings[gte]=${rating}&price[gte]=${sliderValue[0]}&price[lte]=${sliderValue[1]} `;
       //this is for rating + search
       if (search) {
-        link = `http://api.warriordev.tech/api/v1/allProducts?page=${pagination}&ratings[gte]=${rating}&price[gte]=${sliderValue[0]}&price[lte]=${sliderValue[1]}&keyword=${search} `
+        link = `https://api.warriordev.tech/api/v1/allProducts?page=${pagination}&ratings[gte]=${rating}&price[gte]=${sliderValue[0]}&price[lte]=${sliderValue[1]}&keyword=${search} `
       }
 
       if (categoryState) {
-        link = `http://api.warriordev.tech/api/v1/allProducts?page=${pagination}&ratings[gte]=${rating}&price[gte]=${sliderValue[0]}&price[lte]=${sliderValue[1]}&category=${categoryState}`
+        link = `https://api.warriordev.tech/api/v1/allProducts?page=${pagination}&ratings[gte]=${rating}&price[gte]=${sliderValue[0]}&price[lte]=${sliderValue[1]}&category=${categoryState}`
       }
 
       if (categoryState && search) {
-        link = `http://api.warriordev.tech/api/v1/allProducts?page=${pagination}&ratings[gte]=${rating}&price[gte]=${sliderValue[0]}&price[lte]=${sliderValue[1]}&keyword=${search}&category=${categoryState}`
+        link = `https://api.warriordev.tech/api/v1/allProducts?page=${pagination}&ratings[gte]=${rating}&price[gte]=${sliderValue[0]}&price[lte]=${sliderValue[1]}&keyword=${search}&category=${categoryState}`
       }
 
       dispatch(GeneralLoadingTrue());
