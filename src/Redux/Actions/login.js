@@ -16,7 +16,7 @@ import {
 
 
 // import Cookies from 'js-cookie';
-import { Cookies } from 'universal-cookie';
+import  Cookies  from 'universal-cookie';
 
 export const loginUser = (formData) => async (dispatch) => {
   try {
