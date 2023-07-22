@@ -33,6 +33,7 @@ export const loginUser = (formData) => async (dispatch) => {
 
     cookies.set('token', data.token, { expires: new Date(Date.now() + 86400000), secure: true, sameSite: 'None' });
     // dispatch(LoadUserInitializeStates())
+    
     const { data:data2 } = await axios.get(`https://api.warriordev.tech/api/v1/myDetails`);
     dispatch(LoginRequestSuccess(data));
     dispatch(LoadUserRequestSuccess(data2));
