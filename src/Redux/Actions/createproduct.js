@@ -17,12 +17,14 @@ export const createProduct = (formData) => async (dispatch) => {
       headers: {
         "Content-Type": "multipart/form-data",
       },
+      withCredentials: true,
     };
 
     dispatch(GeneralLoadingTrue());
 
     const { data } = await axios.post(
-      `https://api.warriordev.tech/api/v1/admin/createProduct`,{ withCredentials: true },
+      `https://api.warriordev.tech/api/v1/admin/createProduct`,
+      { withCredentials: true },
       formData,
       config
     );
