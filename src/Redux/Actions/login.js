@@ -21,10 +21,9 @@ export const loginUser = (formData) => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
     const config = { headers: { "Content-Type": "application/json" } };
-    const { data } = await axios.post(`https://api.warriordev.tech/api/v1/login`, formData, config);
+    const { data } = await axios.post(`https://api.warriordev.tech/api/v1/login`, formData, config,{ withCredentials: true } );
     
-    console.log(data.token);
-    console.log(typeof data.token );
+  
 
     // Cookies.set('token', data.token, { expires: 864000, secure: true, sameSite: 'None', httpOnly: true, domain: '.warriordev.tech' });
 

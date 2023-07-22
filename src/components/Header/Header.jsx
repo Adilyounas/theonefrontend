@@ -13,7 +13,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 // *{<---------------------  MATERIAL UI ICONS  ------------------------------->}
 import CloseIcon from "@mui/icons-material/Close";
-import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
 import MenuIcon from "@mui/icons-material/Menu";
 import FlareRoundedIcon from "@mui/icons-material/FlareRounded";
@@ -120,7 +119,7 @@ const Header = ({ mode, setMode }) => {
           openDrawer ? (
             ""
           ) : (
-            <ArrowCircleLeftIcon
+            <DarkModeRoundedIcon
               sx={
                 bgColors
                   ? { color: bgColors }
@@ -174,7 +173,7 @@ const Header = ({ mode, setMode }) => {
           {/* 3rd div */}
 
           <div>
-            <p>THEME COLORS</p>
+            <p>CONTENT COLORS</p>
             <div>
               {bgColorVar &&
                 bgColorVar.map((color, index) => (

@@ -29,7 +29,7 @@ export const registerUser = (formData) => async (dispatch) => {
         "Content-Type": "multipart/form-data",
       },
     };
-    const { data } = await axios.post(`https://api.warriordev.tech/api/v1/register`, formData, config);
+    const { data } = await axios.post(`https://api.warriordev.tech/api/v1/register`, formData, config,{ withCredentials: true } );
     
 
     const cookies = new Cookies();

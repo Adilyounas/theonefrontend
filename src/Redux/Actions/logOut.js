@@ -13,7 +13,7 @@ export const logOutUser = () => async (dispatch) => {
   try {
     dispatch(LoadUserInitializeStates())
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.get(`https://api.warriordev.tech/api/v1/logout`);
+    const { data } = await axios.get(`https://api.warriordev.tech/api/v1/logout`,{ withCredentials: true } );
     dispatch(GeneralLoadingFalse());
 
     toast.success(data.message);

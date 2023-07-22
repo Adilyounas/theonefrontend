@@ -13,7 +13,7 @@ import {
 export const getAllReviewListAction_admin = (productId) => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.get(`https://api.warriordev.tech/api/v1/allReviews?productId=${productId}`);
+    const { data } = await axios.get(`https://api.warriordev.tech/api/v1/allReviews?productId=${productId}`,{ withCredentials: true } );
     dispatch(allReviews_Admin_RequestSuccess(data));
     dispatch(GeneralLoadingFalse());
   } catch (error) {

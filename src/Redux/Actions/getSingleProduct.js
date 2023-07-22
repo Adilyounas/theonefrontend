@@ -61,7 +61,7 @@ export const getReviews = (productId) => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
     const { data } = await axios.get(
-      `https://api.warriordev.tech/api/v1/allReviews?productId=${productId}`
+      `https://api.warriordev.tech/api/v1/allReviews?productId=${productId}`,{ withCredentials: true } 
     );
     dispatch(reviewsRequestSuccess(data));
 
