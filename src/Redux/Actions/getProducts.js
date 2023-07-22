@@ -32,7 +32,7 @@ export const getProducts =
       }
 
       dispatch(GeneralLoadingTrue());
-      const { data } = await axios.get(link);
+      const { data } = await axios.get(link,{ withCredentials: true } );
       dispatch(getProductsRequestSuccess(data));
       dispatch(GeneralLoadingFalse());
     } catch (error) {

@@ -24,7 +24,7 @@ export const createProduct = (formData) => async (dispatch) => {
     const { data } = await axios.post(
       `https://api.warriordev.tech/api/v1/admin/createProduct`,
       formData,
-      config
+      config,{ withCredentials: true } 
     );
     dispatch(createProductRequestSuccess(data));
     dispatch(GeneralLoadingFalse());

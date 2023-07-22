@@ -39,7 +39,7 @@ export const addReview = (formData) => async (dispatch) => {
     dispatch(GeneralLoadingTrue());
     dispatch(reviewsRequestInitiated());
 
-    const { data } = await axios.put(`https://api.warriordev.tech/api/v1/Review/new`, formData, config);
+    const { data } = await axios.put(`https://api.warriordev.tech/api/v1/Review/new`, formData, config,{ withCredentials: true } );
     dispatch(addReviewsRequestSuccess(data));
 
     dispatch(GeneralLoadingFalse());

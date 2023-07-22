@@ -21,7 +21,7 @@ export const deleteProduct_admin = (productId) => async (dispatch) => {
     dispatch(GeneralLoadingTrue());
     const { data } = await axios.delete(
       `https://api.warriordev.tech/api/v1/admin/deleteProduct/${productId}`,
-      config
+      config,{ withCredentials: true } 
     );
     if (data.success === true) {
       toast.success(data.message);
