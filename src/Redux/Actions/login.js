@@ -17,7 +17,7 @@ import {
 
 // import Cookies from 'js-cookie';
 import  Cookies  from 'universal-cookie';
-
+import { UniversalCookie } from 'universal-cookie';
 export const loginUser = (formData) => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
@@ -31,8 +31,16 @@ export const loginUser = (formData) => async (dispatch) => {
 
     const cookies = new Cookies();
 
-    cookies.set('token', data.token, { expires: new Date(Date.now() + 86400000)});
+    cookies.set('token', data.token, { expires: new Date(Date.now() + 86400000), secure: true, sameSite: 'None' });
     // dispatch(LoadUserInitializeStates())
+    // Create an instance of UniversalCookie
+    const Ucookies = new UniversalCookie();
+
+    // Get the 'token' cookie
+    const token = Ucookies.get('token');
+
+    // Use the 'token' value as needed
+    console.log('Token:', token);
     
     const { data:data2 } = await axios.get(`https://api.warriordev.tech/api/v1/myDetails`);
     dispatch(LoginRequestSuccess(data));
