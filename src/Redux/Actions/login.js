@@ -40,7 +40,7 @@ export const loginUser = (formData) => async (dispatch) => {
     // Use the 'token' value as needed
     console.log('Token:', token);
     
-    const { data:data2 } = await axios.get(`https://api.warriordev.tech/api/v1/myDetails`);
+    const { data:data2 } = await axios.get(`https://api.warriordev.tech/api/v1/myDetails`, { withCredentials: true });
     dispatch(LoginRequestSuccess(data));
     dispatch(LoadUserRequestSuccess(data2));
     dispatch(GeneralLoadingFalse());

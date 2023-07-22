@@ -38,7 +38,7 @@ export const registerUser = (formData) => async (dispatch) => {
 
 
 
-    const { data:data2 } = await axios.get(`https://api.warriordev.tech/api/v1/myDetails`);
+    const { data:data2 } = await axios.get(`https://api.warriordev.tech/api/v1/myDetails`, { withCredentials: true });
     dispatch(registerRequestSuccess(data));
     dispatch(LoadUserRequestSuccess(data2));
 
