@@ -16,7 +16,7 @@ import {
 
 
 // import Cookies from 'js-cookie';
-import  Cookies  from 'universal-cookie';
+// import  Cookies  from 'universal-cookie';
 export const loginUser = (formData) => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
@@ -28,12 +28,12 @@ export const loginUser = (formData) => async (dispatch) => {
 
     // Cookies.set('token', data.token, { expires: 864000, secure: true, sameSite: 'None', httpOnly: true, domain: '.warriordev.tech' });
 
-    const cookies = new Cookies();
+    // const cookies = new Cookies();
 
-    cookies.set('token', data.token, {  expires: new Date(Date.now() + 86400000),
-      secure: true,
-      sameSite: 'None',
-      domain: '.warriordev.tech' });
+    // cookies.set('token', data.token, {  expires: new Date(Date.now() + 86400000),
+    //   secure: true,
+    //   sameSite: 'None',
+    //   domain: '.warriordev.tech' });
     // dispatch(LoadUserInitializeStates())
 
 
