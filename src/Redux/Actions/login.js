@@ -35,13 +35,9 @@ export const loginUser = (formData) => async (dispatch) => {
       sameSite: 'None',
       domain: '.warriordev.tech' });
     // dispatch(LoadUserInitializeStates())
-    // Create an instance of UniversalCookie
 
-    // Get the 'token' cookie
-    const token = cookies.get('token');
 
-    // Use the 'token' value as needed
-    console.log('Token:', token);
+
     
     const { data:data2 } = await axios.get(`https://api.warriordev.tech/api/v1/myDetails`, { withCredentials: true });
     dispatch(LoginRequestSuccess(data));
