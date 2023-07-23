@@ -17,11 +17,12 @@ export const deleteProduct_admin = (productId) => async (dispatch) => {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
+      withCredentials: true
     };
     dispatch(GeneralLoadingTrue());
     const { data } = await axios.delete(
       `https://api.warriordev.tech/api/v1/admin/deleteProduct/${productId}`,
-      config,{ withCredentials: true } 
+      config
     );
     if (data.success === true) {
       toast.success(data.message);

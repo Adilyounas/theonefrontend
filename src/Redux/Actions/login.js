@@ -20,8 +20,8 @@ import  Cookies  from 'universal-cookie';
 export const loginUser = (formData) => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
-    const config = { headers: { "Content-Type": "application/json" } };
-    const { data } = await axios.post(`https://api.warriordev.tech/api/v1/login`, formData, config,{ withCredentials: true } );
+    const config = { headers: { "Content-Type": "application/json" },withCredentials: true };
+    const { data } = await axios.post(`https://api.warriordev.tech/api/v1/login`, formData, config );
     
   
 

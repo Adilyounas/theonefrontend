@@ -14,11 +14,12 @@ export const deleteReview_admin = (productId,reviewId) => async (dispatch) => {
     const config = {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
-        }
+        },
+        withCredentials: true
        
       }
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.delete(`https://api.warriordev.tech/api/v1/admin/deleteReview?productId=${productId}&id=${reviewId}`,config,{ withCredentials: true } );
+    const { data } = await axios.delete(`https://api.warriordev.tech/api/v1/admin/deleteReview?productId=${productId}&id=${reviewId}`,config);
     if (data.success===true) {
         toast.success(data.reviews);
     }

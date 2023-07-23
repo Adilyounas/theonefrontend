@@ -17,11 +17,12 @@ export const forgotPassword = (formData) => async (dispatch) => {
       headers: {
         "Content-Type": "application/json",
       },
+      withCredentials: true 
     };
 
     dispatch(GeneralLoadingTrue());
 
-    const { data } = await axios.post(`https://api.warriordev.tech/api/v1/forgotPassword`,formData, config,{ withCredentials: true } );
+    const { data } = await axios.post(`https://api.warriordev.tech/api/v1/forgotPassword`,formData, config );
 
     dispatch(forgotPasswordRequestSuccess(data));
     dispatch(GeneralLoadingFalse());

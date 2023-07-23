@@ -5,22 +5,20 @@ import {
   likeAndDislikeRequestFail,
 } from "../Reducers/putLikeAndDislike";
 
-
 export const putLikeAndDislike =
   (productId, likeAndDislike) => async (dispatch) => {
     try {
-
-
       const config = {
         headers: {
           "Content-Type": "application/json",
         },
+        withCredentials: true,
       };
 
       const { data } = await axios.put(
         `https://api.warriordev.tech/api/v1/likeAndDislike`,
         { productId, likeAndDislike },
-        config,{ withCredentials: true } 
+        config
       );
 
       dispatch(likeAndDislikeRequestSuccess(data));
@@ -28,7 +26,6 @@ export const putLikeAndDislike =
       toast.success("Sending Feed Back", {
         duration: 2000,
       });
-    
     } catch (error) {
       console.log(error.response.data);
       dispatch(likeAndDislikeRequestFail(error.response.data));

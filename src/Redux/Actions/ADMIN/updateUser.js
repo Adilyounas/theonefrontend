@@ -15,9 +15,10 @@ export const updateUserAction_admin = (userId,formData) => async (dispatch) => {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
+      withCredentials: true
     }
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.put(`https://api.warriordev.tech/api/v1/admin/updateUserRole/${userId}`,formData,{ withCredentials: true },config);
+    const { data } = await axios.put(`https://api.warriordev.tech/api/v1/admin/updateUserRole/${userId}`,formData,config);
     if (data.success===true) {
         toast.success(data.message);
     }

@@ -20,6 +20,7 @@ try {
       headers: {
         "Content-Type": "multipart/form-data",
       },
+      withCredentials: true
     };
 
     dispatch(GeneralLoadingTrue());
@@ -27,8 +28,7 @@ try {
     const { data } = await axios.put(
       `https://api.warriordev.tech/api/v1/updateProfile`,
       formData,
-      config,
-      { withCredentials: true },
+      config
     );
     dispatch(GeneralLoadingFalse());
     dispatch(updateProfileRequestSuccess(data));

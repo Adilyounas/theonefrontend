@@ -17,11 +17,12 @@ export const deleteOrder_admin = (orderId) => async (dispatch) => {
     const config = {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
-        }
+        },
+        withCredentials: true
        
       }
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.delete(`https://api.warriordev.tech/api/v1/admin/deleteOrder/${orderId}`,config,{ withCredentials: true } );
+    const { data } = await axios.delete(`https://api.warriordev.tech/api/v1/admin/deleteOrder/${orderId}`,config );
     console.log(data);
     dispatch(deleteOrder_Admin_RequestSuccess(data));
 

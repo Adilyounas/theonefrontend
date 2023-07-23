@@ -18,11 +18,12 @@ export const sendEamilAction =
         headers: {
           "Content-Type": "application/json",
         },
+        withCredentials: true
       };
 
       const { data } = await axios.post(
         `https://api.warriordev.tech/api/v1/sendEamilForSale`,{email},
-        config,{ withCredentials: true } 
+        config
       );
 
 

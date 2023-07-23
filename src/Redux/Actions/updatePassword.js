@@ -20,6 +20,7 @@ try {
         headers: {
           "Content-Type": "application/json",
         },
+        withCredentials: true
       };
 
     dispatch(GeneralLoadingTrue());
@@ -27,7 +28,6 @@ try {
     const { data } = await axios.put(
       `https://api.warriordev.tech/api/v1/updatePassword`,
       formData,
-      { withCredentials: true },
       config
     );
     dispatch(GeneralLoadingFalse());

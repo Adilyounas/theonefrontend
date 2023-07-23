@@ -17,11 +17,12 @@ export const deleteUser_admin = (userId) => async (dispatch) => {
     const config = {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
-        }
+        },
+        withCredentials: true
        
       }
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.delete(`https://api.warriordev.tech/api/v1/admin/deleteUser/${userId}`,{ withCredentials: true },config);
+    const { data } = await axios.delete(`https://api.warriordev.tech/api/v1/admin/deleteUser/${userId}`,config);
     dispatch(deleteUser_Admin_RequestSuccess(data));
 
     if (data.success===true) {

@@ -19,7 +19,7 @@ import {
 export const getSingleProduct = (productId) => async (dispatch) => {
   try {
     dispatch(GeneralLoadingTrue());
-    const { data } = await axios.get(`https://api.warriordev.tech/api/v1/singleProduct/${productId}`);
+    const { data } = await axios.get(`https://api.warriordev.tech/api/v1/singleProduct/${productId}`,{ withCredentials: true });
     dispatch(GeneralLoadingFalse());
 
     dispatch(getSingleProductProductsRequestSuccess(data));
@@ -35,11 +35,11 @@ export const getSingleProduct = (productId) => async (dispatch) => {
 
 export const addReview = (formData) => async (dispatch) => {
   try {
-    const config = { headers: { "Content-Type": "application/json" } };
+    const config = { headers: { "Content-Type": "application/json" },withCredentials: true  };
     dispatch(GeneralLoadingTrue());
     dispatch(reviewsRequestInitiated());
 
-    const { data } = await axios.put(`https://api.warriordev.tech/api/v1/Review/new`, formData, config,{ withCredentials: true } );
+    const { data } = await axios.put(`https://api.warriordev.tech/api/v1/Review/new`, formData, config );
     dispatch(addReviewsRequestSuccess(data));
 
     dispatch(GeneralLoadingFalse());

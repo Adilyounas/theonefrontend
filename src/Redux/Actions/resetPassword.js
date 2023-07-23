@@ -17,13 +17,14 @@ export const resetPassword = (formData,token) => async (dispatch) => {
       headers: {
         "Content-Type": "application/json",
       },
+      withCredentials: true
     };
 
     dispatch(GeneralLoadingTrue());
     const { data } = await axios.put(
       `https://api.warriordev.tech/api/v1/resetPassword/${token}`,
       formData,
-      config,{ withCredentials: true } 
+      config
     );
     dispatch(GeneralLoadingFalse());
     dispatch(resetPasswordRequestSuccess(data));
