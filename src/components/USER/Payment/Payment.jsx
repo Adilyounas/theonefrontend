@@ -44,14 +44,14 @@ const Payment = ({ loadUserSuccess, mode }) => {
       const config = {
         headers: {
           "Content-Type": "application/json",
-        },
+        },  withCredentials: true,
       };
 
       //type 1 data demand fullfilling
 
       const {
         data: { API_KEY, RAZORPAY_SECRET_KEY },
-      } = await axios.get("/api/v1/razorApiKey");
+      } = await axios.get("/api/v1/razorApiKey",{  withCredentials: true,});
       //type 2 data demand fullfilling
 
       const {
