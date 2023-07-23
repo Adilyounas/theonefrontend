@@ -32,7 +32,7 @@ Chart.register(CategoryScale);
 
 // !{<-------------------------------   COMPONENT START FROM HERE  ------------------------------------->}
 
-const Dashbord = ({ loadUserSuccess,mode }) => {
+const Dashbord = ({ loadUserSuccess, mode }) => {
   // *{<-------------------------------    USEDISPATCH, USENAVIGATE, USEPARAMS,    ------------------------------------->}
   const history = useNavigate();
   const dispatch = useDispatch();
@@ -50,13 +50,14 @@ const Dashbord = ({ loadUserSuccess,mode }) => {
   let stock = 0;
   let outStock = 0;
 
-  products && products.forEach((item) => {
-    if (item.stock >= 1) {
-      stock = stock + 1;
-    } else {
-      outStock = outStock + 1;
-    }
-  });
+  products &&
+    products.forEach((item) => {
+      if (item.stock >= 1) {
+        stock = stock + 1;
+      } else {
+        outStock = outStock + 1;
+      }
+    });
 
   let Laptop = 0;
   let Footwear = 0;
@@ -66,33 +67,34 @@ const Dashbord = ({ loadUserSuccess,mode }) => {
   let SmartPhone = 0;
   let headphones = 0;
 
-  products && products.forEach((cat) => {
-    if (cat.category === "Laptop") {
-      Laptop = Laptop + 1;
-    }
-    if (cat.category === "Footwear") {
-      Footwear = Footwear + 1;
-    }
-    if (cat.category === "Botton") {
-      Botton = Botton + 1;
-    }
+  products &&
+    products.forEach((cat) => {
+      if (cat.category === "laptop") {
+        Laptop = Laptop + 1;
+      }
+      if (cat.category === "Footwear") {
+        Footwear = Footwear + 1;
+      }
+      if (cat.category === "Botton") {
+        Botton = Botton + 1;
+      }
 
-    if (cat.category === "Tops") {
-      Tops = Tops + 1;
-    }
+      if (cat.category === "Tops") {
+        Tops = Tops + 1;
+      }
 
-    if (cat.category === "Camera") {
-      Camera = Camera + 1;
-    }
+      if (cat.category === "Camera") {
+        Camera = Camera + 1;
+      }
 
-    if (cat.category === "SmartPhone") {
-      SmartPhone = SmartPhone + 1;
-    }
+      if (cat.category === "Smartphone") {
+        SmartPhone = SmartPhone + 1;
+      }
 
-    if (cat.category === "headphones") {
-      headphones = headphones + 1;
-    }
-  });
+      if (cat.category === "Headphones") {
+        headphones = headphones + 1;
+      }
+    });
 
   const CategoryList = [
     { category: "Laptop", qty: Laptop, color: "#F7D5B1", bgColor: "#2C3950" },
@@ -106,13 +108,13 @@ const Dashbord = ({ loadUserSuccess,mode }) => {
     { category: "Tops", qty: Tops, color: "#EC8091", bgColor: "#084227" },
     { category: "Camera", qty: Camera, color: "#0B0E16", bgColor: "#E86E1A" },
     {
-      category: "SmartPhone",
+      category: "Smartphone",
       qty: SmartPhone,
       color: "#DDEA90",
       bgColor: "#1D7948",
     },
     {
-      category: "headphones",
+      category: "Headphones",
       qty: headphones,
       color: "#F7D5B1",
       bgColor: "#2C3950",
@@ -154,14 +156,13 @@ const Dashbord = ({ loadUserSuccess,mode }) => {
   // TODO{<-------------------------------   USEEFFECT HOOOOK   ------------------------------------->}
 
   useEffect(() => {
-    if (loadUserSuccess===false) {
+    if (loadUserSuccess === false) {
       history("/register");
-    }else{
+    } else {
       dispatch(getOrderListAction());
-    dispatch(getProductListAction());
-    dispatch(getUserListAction());
+      dispatch(getProductListAction());
+      dispatch(getUserListAction());
     }
-    
   }, [history, loadUserSuccess, dispatch]);
 
   // *{<-------------------------------   RETURNING STATEMENT   ------------------------------------->}
@@ -172,8 +173,14 @@ const Dashbord = ({ loadUserSuccess,mode }) => {
       {generalLoading ? (
         <Loader />
       ) : (
-        <div id="dashboard" >
-          <div className="dashboardSidebarContainer" style={{backgroundColor:mode?"#000000":"#ffffff",color:mode?"#ffffff":"#000000"}}>
+        <div id="dashboard">
+          <div
+            className="dashboardSidebarContainer"
+            style={{
+              backgroundColor: mode ? "#000000" : "#ffffff",
+              color: mode ? "#ffffff" : "#000000",
+            }}
+          >
             <Modal open={dashboardModalOpen} id="dashboardSidebarModal">
               <div>
                 <DashboardSideBarForModel
@@ -183,11 +190,23 @@ const Dashbord = ({ loadUserSuccess,mode }) => {
             </Modal>
             <DashboardSideBar />
           </div>
-          <div className="dashboardMain" >
-            <div id="dashboardnameContainer" style={{backgroundColor:mode?"#000000":"#ffffff",color:mode?"#ffffff":"#000000"}}>
+          <div className="dashboardMain">
+            <div
+              id="dashboardnameContainer"
+              style={{
+                backgroundColor: mode ? "#000000" : "#ffffff",
+                color: mode ? "#ffffff" : "#000000",
+              }}
+            >
               <h1>Dashboard</h1>
             </div>
-            <div id="dashboardMajor" style={{backgroundColor:mode?"#000000":"#ffffff",color:mode?"#ffffff":"#000000"}}>
+            <div
+              id="dashboardMajor"
+              style={{
+                backgroundColor: mode ? "#000000" : "#ffffff",
+                color: mode ? "#ffffff" : "#000000",
+              }}
+            >
               <NavLink
                 id="dashboardOptionsHideAndShow"
                 onClick={() => setDashboardModalOpen(!dashboardModalOpen)}
@@ -259,7 +278,13 @@ const Dashbord = ({ loadUserSuccess,mode }) => {
               </NavLink>
             </div>
 
-            <div id="categoryCalculation" style={{backgroundColor:mode?"#000000":"#ffffff",color:mode?"#ffffff":"#000000"}}>
+            <div
+              id="categoryCalculation"
+              style={{
+                backgroundColor: mode ? "#000000" : "#ffffff",
+                color: mode ? "#ffffff" : "#000000",
+              }}
+            >
               <div className="heading">Categories And There Count In DB</div>
               <div className="items">
                 {CategoryList.map((category) => (
@@ -273,13 +298,31 @@ const Dashbord = ({ loadUserSuccess,mode }) => {
               </div>
             </div>
 
-            <div id="graphContainer" style={{backgroundColor:mode?"#000000":"#ffffff",color:mode?"#ffffff":"#000000"}}>
-              <div className="lineChart" >
-                <Line style={{backgroundColor:mode?"#ffffff":"#ffffff",color:mode?"#ffffff":"#000000"}} data={lineState} />
+            <div
+              id="graphContainer"
+              style={{
+                backgroundColor: mode ? "#000000" : "#ffffff",
+                color: mode ? "#ffffff" : "#000000",
+              }}
+            >
+              <div className="lineChart">
+                <Line
+                  style={{
+                    backgroundColor: mode ? "#ffffff" : "#ffffff",
+                    color: mode ? "#ffffff" : "#000000",
+                  }}
+                  data={lineState}
+                />
               </div>
               <br />
               <div className="graphChart">
-                <PolarArea style={{backgroundColor:mode?"#ffffff":"#ffffff",color:mode?"#ffffff":"#000000"}} data={doughnutState} />
+                <PolarArea
+                  style={{
+                    backgroundColor: mode ? "#ffffff" : "#ffffff",
+                    color: mode ? "#ffffff" : "#000000",
+                  }}
+                  data={doughnutState}
+                />
               </div>
             </div>
           </div>

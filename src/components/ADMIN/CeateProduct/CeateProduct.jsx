@@ -48,8 +48,8 @@ const CeateProduct = ({ mode, loadUserSuccess }) => {
     "Botton",
     "Tops",
     "Camera",
-    "SmartPhone",
-    "headphones",
+    "Smartphone",
+    "Headphones",
   ];
 
   // *{<-------------------------------    REGULAR FUNCTIONS   ------------------------------------->}

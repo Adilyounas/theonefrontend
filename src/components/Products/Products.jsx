@@ -46,8 +46,8 @@ const Products = ({ mode }) => {
     { cat: "Botton", link: "mobile" },
     { cat: "Tops", link: "watches" },
     { cat: "Camera", link: "ram" },
-    { cat: "SmartPhone", link: "books" },
-    { cat: "HeadPhones", link: "books" },
+    { cat: "Smartphone", link: "books" },
+    { cat: "Headphones", link: "books" },
   ];
 
   // *{<------------------------ REGULAR FUNCTIONS  -------------------------->}
