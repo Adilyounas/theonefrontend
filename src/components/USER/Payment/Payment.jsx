@@ -51,12 +51,12 @@ const Payment = ({ loadUserSuccess, mode }) => {
 
       const {
         data: { API_KEY, RAZORPAY_SECRET_KEY },
-      } = await axios.get("/api/v1/razorApiKey",{  withCredentials: true,});
+      } = await axios.get("https://api.warriordev.tech/api/v1/razorApiKey",{  withCredentials: true,});
       //type 2 data demand fullfilling
 
       const {
         data: { order },
-      } = await axios.post("/api/v1/payment/process", { amount }, config);
+      } = await axios.post("https://api.warriordev.tech/api/v1/payment/process", { amount }, config);
 
       const options = {
         API_KEY,
