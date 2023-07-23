@@ -69,7 +69,7 @@ const Dashbord = ({ loadUserSuccess, mode }) => {
 
   products &&
     products.forEach((cat) => {
-      if (cat.category === "laptop") {
+      if (cat.category === "Laptop") {
         Laptop = Laptop + 1;
       }
       if (cat.category === "Footwear") {
