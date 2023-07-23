@@ -83,7 +83,7 @@ const Payment = ({ loadUserSuccess, mode }) => {
           try {
             if (Authenticated) {
               const { data } = await axios.post(
-                `${protocol}//${host}/api/v1/paymentVerification`,
+                `https://api.warriordev.tech/api/v1/paymentVerification`,
                 {
                   orderSummary,
                   shippingInfo,
