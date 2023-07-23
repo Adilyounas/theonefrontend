@@ -136,7 +136,9 @@ h1 {
 
   #box1 > img {
     transform: translateX(0vmax);
+    height: 87vh;
   }
+
 
   #box1 > div {
     top: 50%;
@@ -197,5 +199,12 @@ h1 {
 @media screen and (max-width: 60px) {
   .morebtn > a {
     font-size: 2.5vmax;
+  }
+}
+
+
+@media screen and (max-width: 530px) {
+  #box1 > img {
+    height: 78vh;
   }
 }
