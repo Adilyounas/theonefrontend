@@ -67,7 +67,7 @@ const Header = ({ mode, setMode }) => {
     if (e.target.innerText === "#000000") {
       localStorage.removeItem("colors");
 
-      window.location.reload();
+      window.location.href = "https://www.warriordev.tech";
       return;
     } else {
       dispatch(setBgColors(e.target.innerText));
