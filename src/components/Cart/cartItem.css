@@ -23,9 +23,13 @@
 }
 
 #item > div > div > h3 {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 2vmax;
+  font-family: Courier New,Courier,monospace;
+  font-size: 1.7vmax;
   margin: 0 1vmax;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 120px;
 }
 
 #item > div > div > span {

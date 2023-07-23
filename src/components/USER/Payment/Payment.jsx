@@ -38,8 +38,8 @@ const Payment = ({ loadUserSuccess, mode }) => {
     payBtn.current.disabled = true;
 
     try {
-      const protocol = window.location.protocol;
-      const host = process.env.REACT_APP_BACKEND_PORT;
+      // const protocol = window.location.protocol;
+      // const host = process.env.REACT_APP_BACKEND_PORT;
 
       const config = {
         headers: {
